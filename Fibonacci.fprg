@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="csfay"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-19 09:17:52 PM"/>
+        <attribute name="created" value="Y3NmYXk7REVTS1RPUC0xVUo3SDhFOzIwMjItMDktMTk7MDc6Mzk6MjcgUE07Mjg3NA=="/>
+        <attribute name="edited" value="Y3NmYXk7REVTS1RPUC0xVUo3SDhFOzIwMjItMDktMTk7MDk6MTc6NTIgUE07MjsyOTc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, F1, F2, X, F3" type="Integer" array="False" size=""/>
+            <assign variable="F1" expression="0"/>
+            <assign variable="F2" expression="1"/>
+            <assign variable="F3" expression="F1+F2"/>
+            <output expression="&quot;Please enter a positive integer number.&quot;" newline="True"/>
+            <input variable="N"/>
+            <if expression="N&lt;=0">
+                <then>
+                    <call expression="Main"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;The Fibonacci series is:&quot;" newline="True"/>
+            <output expression="F1" newline="True"/>
+            <output expression="F2" newline="True"/>
+            <output expression="F3" newline="True"/>
+            <while expression="F3&lt;=N">
+                <assign variable="F1" expression="F2"/>
+                <assign variable="F2" expression="F3"/>
+                <assign variable="F3" expression="F1+F2"/>
+                <if expression="F3&lt;=N">
+                    <then>
+                        <output expression="F3" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <declare name="Answer" type="String" array="False" size=""/>
+            <output expression="&quot;Would you like to play the program again? Respond with y or n.&quot;" newline="True"/>
+            <input variable="Answer"/>
+            <if expression="Answer == &quot;y&quot;">
+                <then>
+                    <call expression="Main"/>
+                </then>
+                <else>
+                    <output expression="&quot;OK. Goodbye, dear. Pleased to meet you.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
